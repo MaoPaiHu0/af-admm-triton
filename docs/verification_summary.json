@@ -1,0 +1,120 @@
+{
+  "tests_passed": 22,
+  "initializations": 32,
+  "total_gradient_updates_per_solve": 7168,
+  "reference_max_difference_db": 7.105427357601002e-15,
+  "mean_psl_db": -51.12553737836108,
+  "mean_improvement_db": 33.75575781800059,
+  "measured_mean_cuda_event_ms": 73.48668732643128,
+  "paper_mean_cuda_event_ms": 75.43229312896729,
+  "maximum_modulus_error": 2.670439904761679e-07,
+  "maximum_gpu_vs_independent_scorer_difference_db": 1.805554322942271e-05,
+  "best_before_last_count": 31,
+  "mean_last_iterate_psl_from_gpu_history_db": -42.928767055273056,
+  "memory": {
+    "peak_allocated_mib": 3.01806640625,
+    "peak_reserved_mib": 8.0,
+    "allocated_after_solve_mib": 2.787109375,
+    "scope": "Fresh process; input + solver setup + warmup/capture + first complete replay. No separate GPU scorer. Reserved memory is a distinct allocator statistic."
+  },
+  "original_source_files_unchanged": true,
+  "independent_install_smoke": {
+    "imported_file": "isolated wheel installation / af_unfolding / __init__.py",
+    "full_cpu_updates": 7168,
+    "psl_db": -52.17951932862075,
+    "max_modulus_error": 1.1920928955078125e-07,
+    "finite": true,
+    "output_shape": [
+      1,
+      256,
+      1
+    ]
+  },
+  "pipeline_verification": "pipeline_verification.json",
+  "baseline_full_budget_verification": [
+    {
+      "method": "admm",
+      "seed": 1860028,
+      "actual_psl_db": -45.61439642207133,
+      "reference_psl_db": -45.61439642207133,
+      "difference_db": 0.0
+    },
+    {
+      "method": "aiso",
+      "seed": 1860028,
+      "actual_psl_db": -45.449534993478906,
+      "reference_psl_db": -45.449534993478906,
+      "difference_db": 0.0
+    },
+    {
+      "method": "qgd",
+      "seed": 1860028,
+      "actual_psl_db": -45.75756619470954,
+      "reference_psl_db": -45.75756619470954,
+      "difference_db": 0.0
+    },
+    {
+      "method": "consensus",
+      "seed": 1860028,
+      "actual_psl_db": -48.57260027216582,
+      "reference_psl_db": -48.57260027216582,
+      "difference_db": 0.0
+    },
+    {
+      "method": "ours",
+      "seed": 1860028,
+      "actual_psl_db": -51.15729256501993,
+      "reference_psl_db": -51.15729256501993,
+      "difference_db": 0.0
+    },
+    {
+      "method": "admm",
+      "seed": 95000,
+      "actual_psl_db": -45.19609266597656,
+      "reference_psl_db": -45.19609451293945,
+      "difference_db": 1.8469628955131157e-06,
+      "updates": 7168
+    },
+    {
+      "method": "aiso",
+      "seed": 95000,
+      "actual_psl_db": -46.56864183280245,
+      "reference_psl_db": -46.568634033203125,
+      "difference_db": -7.799599323732309e-06,
+      "updates": 7168
+    },
+    {
+      "method": "qgd",
+      "seed": 95000,
+      "actual_psl_db": -45.92481718099418,
+      "reference_psl_db": -45.92481231689453,
+      "difference_db": -4.8640996510584955e-06,
+      "updates": 7168
+    },
+    {
+      "method": "wavenet",
+      "seed": 95000,
+      "actual_psl_db": -42.92791708024269,
+      "reference_psl_db": -42.927917080242686,
+      "difference_db": -7.105427357601002e-15,
+      "updates": 5000
+    },
+    {
+      "method": "mal",
+      "seed": 95000,
+      "actual_psl_db": -47.86572899898318,
+      "reference_psl_db": -47.86572265625,
+      "difference_db": -6.34273317956513e-06,
+      "updates": 4368
+    }
+  ],
+  "v2_installation": {
+    "version": "0.2.0",
+    "wheel_sha256": "ec930153acd2962efb439c31b1e70364a73ef47c67942a0f57ae1d58eb2d5fe7",
+    "build": "passed",
+    "isolated_install": "passed",
+    "seven_method_cpu_pipeline": "passed",
+    "mode": "quick / reduced budget",
+    "module_entry": "python -m af_unfolding.pipeline"
+  }
+}

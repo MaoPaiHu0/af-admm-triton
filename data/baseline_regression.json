@@ -1,0 +1,44 @@
+[
+  {
+    "method": "admm",
+    "seed": 1860028,
+    "budget": 2,
+    "psl_db": -20.840134958727788,
+    "updates": 32
+  },
+  {
+    "method": "aiso",
+    "seed": 1860028,
+    "budget": 2,
+    "psl_db": -21.805639262066485,
+    "updates": 32
+  },
+  {
+    "method": "qgd",
+    "seed": 1860028,
+    "budget": 2,
+    "psl_db": -23.83494474065985,
+    "updates": 32
+  },
+  {
+    "method": "consensus",
+    "seed": 1860028,
+    "budget": 2,
+    "psl_db": -20.313962649027633,
+    "updates": 32
+  },
+  {
+    "method": "wavenet",
+    "seed": 1860028,
+    "budget": 100,
+    "psl_db": -23.544158990994713,
+    "updates": 100
+  },
+  {
+    "method": "mal",
+    "seed": 1860028,
+    "budget": 2,
+    "psl_db": -23.24876025911348,
+    "updates": 112
+  }
+]

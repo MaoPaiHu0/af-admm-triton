@@ -1,0 +1,8 @@
+method,time_ms,local_psl_db,psl_statistic,family,source,source_lines
+Ours,75.43,-51.13,mean,proposed,final_paper/table_results_rows.tex,
+ADMM,11456.12,-45.64,mean,optimization,final_paper/table_results_rows.tex,
+AISO,14489.96,-46.23,mean,optimization,final_paper/table_results_rows.tex,
+QGD,12140.88,-45.75,mean,optimization,final_paper/table_results_rows.tex,
+Consensus-ADMM,9018.35,-48.57,single initialization,optimization,final_paper/table_results_rows.tex,
+WaveNet,2679.61,-41.39,mean,neural network,final_paper/table_results_rows.tex,
+MAL-Net,6394.1,-47.87,single initialization,neural network,final_paper/table_results_rows.tex,

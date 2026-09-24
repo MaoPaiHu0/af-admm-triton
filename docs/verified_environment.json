@@ -1,0 +1,16 @@
+{
+  "python": "3.12.7",
+  "os": "Windows-11-10.0.26200-SP0",
+  "gpu": "NVIDIA GeForce RTX 3070",
+  "driver": "591.86",
+  "cuda_runtime": "12.1",
+  "packages": {
+    "torch": "2.5.1+cu121",
+    "numpy": "1.26.4",
+    "triton-windows": "3.1.0.post17",
+    "pytest": "7.4.4",
+    "setuptools": "75.1.0",
+    "matplotlib": "3.9.2"
+  },
+  "note": "Solver/test/wheel verification environment. Figure script was additionally executed with the available Matplotlib runtime; no Linux verification."
+}

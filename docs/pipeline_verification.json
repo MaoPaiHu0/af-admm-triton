@@ -1,0 +1,1668 @@
+{
+  "pipeline_full_validation": {
+    "protocol": "example",
+    "device": "cuda",
+    "quick": false,
+    "results": {
+      "summary": [
+        {
+          "method": "admm",
+          "label": "ADMM",
+          "seeds": 1,
+          "psl_db": -45.61439642207133,
+          "wall_ms": 10894.927599991206,
+          "cuda_event_ms": 10894.58984375,
+          "mean_updates": 7168
+        },
+        {
+          "method": "aiso",
+          "label": "AISO",
+          "seeds": 1,
+          "psl_db": -45.449534993478906,
+          "wall_ms": 14246.706500009168,
+          "cuda_event_ms": 14246.26953125,
+          "mean_updates": 7168
+        },
+        {
+          "method": "qgd",
+          "label": "QGD",
+          "seeds": 1,
+          "psl_db": -45.75756619470954,
+          "wall_ms": 12711.42130001681,
+          "cuda_event_ms": 12711.0302734375,
+          "mean_updates": 7168
+        },
+        {
+          "method": "consensus",
+          "label": "Consensus-ADMM",
+          "seeds": 1,
+          "psl_db": -48.57260027216582,
+          "wall_ms": 7949.256799998693,
+          "cuda_event_ms": 7948.99267578125,
+          "mean_updates": 7168
+        },
+        {
+          "method": "wavenet",
+          "label": "WaveNet",
+          "seeds": 1,
+          "psl_db": -42.009607299254796,
+          "wall_ms": 2655.2287999656983,
+          "cuda_event_ms": 2655.1103515625,
+          "mean_updates": 3800
+        },
+        {
+          "method": "mal",
+          "label": "MAL-Net",
+          "seeds": 1,
+          "psl_db": -46.62256896434926,
+          "wall_ms": 4106.60680005094,
+          "cuda_event_ms": 4106.47119140625,
+          "mean_updates": 2576
+        },
+        {
+          "method": "ours",
+          "label": "Ours",
+          "seeds": 1,
+          "psl_db": -51.15729256501993,
+          "wall_ms": 74.54450003569946,
+          "cuda_event_ms": 74.51171112060547,
+          "mean_updates": 7168
+        }
+      ],
+      "runs": [
+        {
+          "method": "admm",
+          "label": "ADMM",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": false,
+          "updates": 7168,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -45.61439642207133,
+          "wall_ms": 10894.927599991206,
+          "cuda_event_ms": 10894.58984375,
+          "setup_seconds": 0.8385389999602921,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "execution_layers": 448,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 10894.927599991206,
+              "cuda_event_ms": 10894.58984375,
+              "peak_allocated_mib": 16.19384765625,
+              "psl_db": -45.61439642207133,
+              "max_modulus_error": 1.0854898313539252e-07,
+              "scorer_difference_db": -5.095167033175585e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "aiso",
+          "label": "AISO",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": false,
+          "updates": 7168,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -45.449534993478906,
+          "wall_ms": 14246.706500009168,
+          "cuda_event_ms": 14246.26953125,
+          "setup_seconds": 0.9308084000367671,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "block_size": 256,
+            "acceleration": 0.35,
+            "step_multiplier": 1.0,
+            "execution_layers": 448,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 14246.706500009168,
+              "cuda_event_ms": 14246.26953125,
+              "peak_allocated_mib": 16.19384765625,
+              "psl_db": -45.449534993478906,
+              "max_modulus_error": 6.575166322519976e-08,
+              "scorer_difference_db": -3.438303124880804e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "qgd",
+          "label": "QGD",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": false,
+          "updates": 7168,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -45.75756619470954,
+          "wall_ms": 12711.42130001681,
+          "cuda_event_ms": 12711.0302734375,
+          "setup_seconds": 0.9124492999981157,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.2,
+            "final_step": 0.04,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "momentum": 0.0,
+            "gradient_normalization": false,
+            "execution_layers": 448,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 12711.42130001681,
+              "cuda_event_ms": 12711.0302734375,
+              "peak_allocated_mib": 16.19384765625,
+              "psl_db": -45.75756619470954,
+              "max_modulus_error": 6.181836886831604e-08,
+              "scorer_difference_db": 2.164665460213655e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "consensus",
+          "label": "Consensus-ADMM",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": false,
+          "updates": 7168,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -48.57260027216582,
+          "wall_ms": 7949.256799998693,
+          "cuda_event_ms": 7948.99267578125,
+          "setup_seconds": 0.7706124999676831,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "consensus_blocks": 9,
+            "local_rho_multiplier": 1.0,
+            "local_step_multiplier": 0.75,
+            "execution_layers": 448,
+            "gradient": "paired_slice"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 7949.256799998693,
+              "cuda_event_ms": 7948.99267578125,
+              "peak_allocated_mib": 18.37548828125,
+              "psl_db": -48.57260027216582,
+              "max_modulus_error": 9.83506444063309e-08,
+              "scorer_difference_db": -2.768503712502479e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "wavenet",
+          "label": "WaveNet",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": false,
+          "updates": 3800,
+          "stop_reason": "PSL_plateau_1000_steps",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -42.009607299254796,
+          "wall_ms": 2655.2287999656983,
+          "cuda_event_ms": 2655.1103515625,
+          "setup_seconds": 1.9689710999955423,
+          "settings": {
+            "learning_rate": 0.001,
+            "min_steps": 2000,
+            "max_steps": 30000,
+            "plateau_block": 100,
+            "plateau_blocks": 10,
+            "tolerance_db": 0.005,
+            "parameters": 394752,
+            "graph": true
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 2655.2287999656983,
+              "cuda_event_ms": 2655.1103515625,
+              "peak_allocated_mib": 47.9560546875,
+              "psl_db": -42.009607299254796,
+              "max_modulus_error": 6.20681868124251e-08,
+              "scorer_difference_db": 5.737854579024315e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "mal",
+          "label": "MAL-Net",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": false,
+          "updates": 2576,
+          "stop_reason": "PSL_plateau_20_passes",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -46.62256896434926,
+          "wall_ms": 4106.60680005094,
+          "cuda_event_ms": 4106.47119140625,
+          "setup_seconds": 0.4142334000207484,
+          "settings": {
+            "layers": 56,
+            "max_passes": 100,
+            "patience": 20,
+            "tolerance_db": 0.01,
+            "step_start": 0.04,
+            "step_end": 0.008,
+            "weights": "preset_steps"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 4106.60680005094,
+              "cuda_event_ms": 4106.47119140625,
+              "peak_allocated_mib": 12.99365234375,
+              "psl_db": -46.62256896434926,
+              "max_modulus_error": 6.063019952762261e-08,
+              "scorer_difference_db": -1.037059926289885e-05
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "ours",
+          "label": "Ours",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": false,
+          "updates": 7168,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -51.15729256501993,
+          "wall_ms": 74.54450003569946,
+          "cuda_event_ms": 74.51171112060547,
+          "setup_seconds": 3.9224328999989666,
+          "settings": {
+            "length": 256,
+            "doppler_bins": [
+              -4,
+              -3,
+              -2,
+              -1,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "delay_bins": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              -4,
+              -3,
+              -2,
+              -1,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "exclude_origin": true,
+            "outer_iterations": 448,
+            "inner_updates": 16,
+            "parameter_stages": 8,
+            "parameters": {
+              "alpha": 0.008,
+              "rho": 0.1978032260497325,
+              "mu": 0.15069389411697287,
+              "gamma": 0.45
+            },
+            "q_initial": 8,
+            "q_final": 128,
+            "q_ramp_outer_iterations": 56,
+            "projection_mode": 3,
+            "select_best": true,
+            "fuse_momentum": true,
+            "dtype": "float32/complex64",
+            "note": "Full precision controls used to obtain the final paper results; not rounded display values.",
+            "backend": "triton",
+            "graph": true,
+            "execution_layers": 448
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 74.54450003569946,
+              "cuda_event_ms": 74.51171112060547,
+              "peak_allocated_mib": 2.7890625,
+              "psl_db": -51.15729256501993,
+              "max_modulus_error": 2.3189337938767096e-07,
+              "scorer_difference_db": 2.6620308517522062e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        }
+      ]
+    }
+  },
+  "pipeline_quick_validation": {
+    "protocol": "example",
+    "device": "cuda",
+    "quick": true,
+    "results": {
+      "summary": [
+        {
+          "method": "admm",
+          "label": "ADMM",
+          "seeds": 1,
+          "psl_db": -20.840134958727788,
+          "wall_ms": 52.451200026553124,
+          "cuda_event_ms": 52.438846588134766,
+          "mean_updates": 32
+        },
+        {
+          "method": "aiso",
+          "label": "AISO",
+          "seeds": 1,
+          "psl_db": -21.805639262066485,
+          "wall_ms": 77.43720000144094,
+          "cuda_event_ms": 77.42054748535156,
+          "mean_updates": 32
+        },
+        {
+          "method": "qgd",
+          "label": "QGD",
+          "seeds": 1,
+          "psl_db": -23.83494474065985,
+          "wall_ms": 53.04770002840087,
+          "cuda_event_ms": 53.03526306152344,
+          "mean_updates": 32
+        },
+        {
+          "method": "consensus",
+          "label": "Consensus-ADMM",
+          "seeds": 1,
+          "psl_db": -20.313962649027633,
+          "wall_ms": 35.97869997611269,
+          "cuda_event_ms": 35.969215393066406,
+          "mean_updates": 32
+        },
+        {
+          "method": "wavenet",
+          "label": "WaveNet",
+          "seeds": 1,
+          "psl_db": -23.544158990994713,
+          "wall_ms": 81.22190000722185,
+          "cuda_event_ms": 81.19602966308594,
+          "mean_updates": 100
+        },
+        {
+          "method": "mal",
+          "label": "MAL-Net",
+          "seeds": 1,
+          "psl_db": -23.24876025911348,
+          "wall_ms": 167.28760005207732,
+          "cuda_event_ms": 167.27072143554688,
+          "mean_updates": 112
+        },
+        {
+          "method": "ours",
+          "label": "Ours",
+          "seeds": 1,
+          "psl_db": -19.411617022380035,
+          "wall_ms": 0.48429996240884066,
+          "cuda_event_ms": 0.4790720045566559,
+          "mean_updates": 32
+        }
+      ],
+      "runs": [
+        {
+          "method": "admm",
+          "label": "ADMM",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -20.840134958727788,
+          "wall_ms": 52.451200026553124,
+          "cuda_event_ms": 52.438846588134766,
+          "setup_seconds": 0.7177550999913365,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "execution_layers": 2,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 52.451200026553124,
+              "cuda_event_ms": 52.438846588134766,
+              "peak_allocated_mib": 12.49169921875,
+              "psl_db": -20.840134958727788,
+              "max_modulus_error": 1.1906973018671607e-07,
+              "scorer_difference_db": -1.2917356002617453e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "aiso",
+          "label": "AISO",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -21.805639262066485,
+          "wall_ms": 77.43720000144094,
+          "cuda_event_ms": 77.42054748535156,
+          "setup_seconds": 0.6722240999806672,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "block_size": 256,
+            "acceleration": 0.35,
+            "step_multiplier": 1.0,
+            "execution_layers": 2,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 77.43720000144094,
+              "cuda_event_ms": 77.42054748535156,
+              "peak_allocated_mib": 12.49169921875,
+              "psl_db": -21.805639262066485,
+              "max_modulus_error": 7.236769850038627e-08,
+              "scorer_difference_db": 4.901288264136383e-09
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "qgd",
+          "label": "QGD",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -23.83494474065985,
+          "wall_ms": 53.04770002840087,
+          "cuda_event_ms": 53.03526306152344,
+          "setup_seconds": 0.6036807000054978,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.2,
+            "final_step": 0.04,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "momentum": 0.0,
+            "gradient_normalization": false,
+            "execution_layers": 2,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 53.04770002840087,
+              "cuda_event_ms": 53.03526306152344,
+              "peak_allocated_mib": 12.49169921875,
+              "psl_db": -23.83494474065985,
+              "max_modulus_error": 6.293665655299208e-08,
+              "scorer_difference_db": -9.692975453390318e-07
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "consensus",
+          "label": "Consensus-ADMM",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -20.313962649027633,
+          "wall_ms": 35.97869997611269,
+          "cuda_event_ms": 35.969215393066406,
+          "setup_seconds": 0.5273163000238128,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "consensus_blocks": 9,
+            "local_rho_multiplier": 1.0,
+            "local_step_multiplier": 0.75,
+            "execution_layers": 2,
+            "gradient": "paired_slice"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 35.97869997611269,
+              "cuda_event_ms": 35.969215393066406,
+              "peak_allocated_mib": 14.67333984375,
+              "psl_db": -20.313962649027633,
+              "max_modulus_error": 1.0004447736911004e-07,
+              "scorer_difference_db": -1.6199748991141405e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "wavenet",
+          "label": "WaveNet",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": true,
+          "updates": 100,
+          "stop_reason": "maximum_steps",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -23.544158990994713,
+          "wall_ms": 81.22190000722185,
+          "cuda_event_ms": 81.19602966308594,
+          "setup_seconds": 2.4206295000039972,
+          "settings": {
+            "learning_rate": 0.001,
+            "min_steps": 2000,
+            "max_steps": 100,
+            "plateau_block": 100,
+            "plateau_blocks": 10,
+            "tolerance_db": 0.005,
+            "parameters": 394752,
+            "graph": true
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 81.22190000722185,
+              "cuda_event_ms": 81.19602966308594,
+              "peak_allocated_mib": 47.9560546875,
+              "psl_db": -23.544158990994713,
+              "max_modulus_error": 5.9565003374117964e-08,
+              "scorer_difference_db": -5.544783832078792e-08
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "mal",
+          "label": "MAL-Net",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": true,
+          "updates": 112,
+          "stop_reason": "maximum_passes",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -23.24876025911348,
+          "wall_ms": 167.28760005207732,
+          "cuda_event_ms": 167.27072143554688,
+          "setup_seconds": 0.4160363000119105,
+          "settings": {
+            "layers": 56,
+            "max_passes": 2,
+            "patience": 20,
+            "tolerance_db": 0.01,
+            "step_start": 0.04,
+            "step_end": 0.008,
+            "weights": "preset_steps"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 167.28760005207732,
+              "cuda_event_ms": 167.27072143554688,
+              "peak_allocated_mib": 12.99365234375,
+              "psl_db": -23.24876025911348,
+              "max_modulus_error": 6.369555349827749e-08,
+              "scorer_difference_db": -3.572480977709347e-08
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "ours",
+          "label": "Ours",
+          "seed": 1860028,
+          "device": "cuda",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856421988935534,
+          "psl_db": -19.411617022380035,
+          "wall_ms": 0.48429996240884066,
+          "cuda_event_ms": 0.4790720045566559,
+          "setup_seconds": 0.44577460002619773,
+          "settings": {
+            "length": 256,
+            "doppler_bins": [
+              -4,
+              -3,
+              -2,
+              -1,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "delay_bins": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              -4,
+              -3,
+              -2,
+              -1,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "exclude_origin": true,
+            "outer_iterations": 448,
+            "inner_updates": 16,
+            "parameter_stages": 8,
+            "parameters": {
+              "alpha": 0.008,
+              "rho": 0.1978032260497325,
+              "mu": 0.15069389411697287,
+              "gamma": 0.45
+            },
+            "q_initial": 8,
+            "q_final": 128,
+            "q_ramp_outer_iterations": 56,
+            "projection_mode": 3,
+            "select_best": true,
+            "fuse_momentum": true,
+            "dtype": "float32/complex64",
+            "note": "Full precision controls used to obtain the final paper results; not rounded display values.",
+            "backend": "triton",
+            "graph": true,
+            "execution_layers": 2
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 0.48429996240884066,
+              "cuda_event_ms": 0.4790720045566559,
+              "peak_allocated_mib": 2.78759765625,
+              "psl_db": -19.411617022380035,
+              "max_modulus_error": 2.3543711769047349e-07,
+              "scorer_difference_db": 2.566726990949064e-07
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        }
+      ]
+    }
+  },
+  "pipeline_cpu_validation": {
+    "protocol": "example",
+    "device": "cpu",
+    "quick": true,
+    "results": {
+      "summary": [
+        {
+          "method": "admm",
+          "label": "ADMM",
+          "seeds": 1,
+          "psl_db": -20.84013433942062,
+          "wall_ms": 38.66540000308305,
+          "cuda_event_ms": null,
+          "mean_updates": 32
+        },
+        {
+          "method": "aiso",
+          "label": "AISO",
+          "seeds": 1,
+          "psl_db": -21.805639230590025,
+          "wall_ms": 42.83629998099059,
+          "cuda_event_ms": null,
+          "mean_updates": 32
+        },
+        {
+          "method": "qgd",
+          "label": "QGD",
+          "seeds": 1,
+          "psl_db": -23.834943366230124,
+          "wall_ms": 35.54389998316765,
+          "cuda_event_ms": null,
+          "mean_updates": 32
+        },
+        {
+          "method": "consensus",
+          "label": "Consensus-ADMM",
+          "seeds": 1,
+          "psl_db": -20.313847836579626,
+          "wall_ms": 31.172399991191924,
+          "cuda_event_ms": null,
+          "mean_updates": 32
+        },
+        {
+          "method": "wavenet",
+          "label": "WaveNet",
+          "seeds": 1,
+          "psl_db": -23.54023513322013,
+          "wall_ms": 373.4624999924563,
+          "cuda_event_ms": null,
+          "mean_updates": 100
+        },
+        {
+          "method": "mal",
+          "label": "MAL-Net",
+          "seeds": 1,
+          "psl_db": -23.248759631655382,
+          "wall_ms": 138.17509997170419,
+          "cuda_event_ms": null,
+          "mean_updates": 112
+        },
+        {
+          "method": "ours",
+          "label": "Ours",
+          "seeds": 1,
+          "psl_db": -19.41161790347654,
+          "wall_ms": 33.567699952982366,
+          "cuda_event_ms": null,
+          "mean_updates": 32
+        }
+      ],
+      "runs": [
+        {
+          "method": "admm",
+          "label": "ADMM",
+          "seed": 1860028,
+          "device": "cpu",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856422259273227,
+          "psl_db": -20.84013433942062,
+          "wall_ms": 38.66540000308305,
+          "cuda_event_ms": null,
+          "setup_seconds": 0.04718200000934303,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "execution_layers": 2,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 38.66540000308305,
+              "cuda_event_ms": null,
+              "peak_allocated_mib": null,
+              "psl_db": -20.84013433942062,
+              "max_modulus_error": 1.3016836897250528e-07,
+              "scorer_difference_db": -2.579777063971278e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "CPU"
+          }
+        },
+        {
+          "method": "aiso",
+          "label": "AISO",
+          "seed": 1860028,
+          "device": "cpu",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856422259273227,
+          "psl_db": -21.805639230590025,
+          "wall_ms": 42.83629998099059,
+          "cuda_event_ms": null,
+          "setup_seconds": 0.05517060001147911,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "block_size": 256,
+            "acceleration": 0.35,
+            "step_multiplier": 1.0,
+            "execution_layers": 2,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 42.83629998099059,
+              "cuda_event_ms": null,
+              "peak_allocated_mib": null,
+              "psl_db": -21.805639230590025,
+              "max_modulus_error": 3.558689243288171e-08,
+              "scorer_difference_db": 3.63777488132655e-08
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "CPU"
+          }
+        },
+        {
+          "method": "qgd",
+          "label": "QGD",
+          "seed": 1860028,
+          "device": "cpu",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856422259273227,
+          "psl_db": -23.834943366230124,
+          "wall_ms": 35.54389998316765,
+          "cuda_event_ms": null,
+          "setup_seconds": 0.05402639997191727,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.2,
+            "final_step": 0.04,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "momentum": 0.0,
+            "gradient_normalization": false,
+            "execution_layers": 2,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 35.54389998316765,
+              "cuda_event_ms": null,
+              "peak_allocated_mib": null,
+              "psl_db": -23.834943366230124,
+              "max_modulus_error": 4.007410481232654e-08,
+              "scorer_difference_db": 4.051321802478469e-07
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "CPU"
+          }
+        },
+        {
+          "method": "consensus",
+          "label": "Consensus-ADMM",
+          "seed": 1860028,
+          "device": "cpu",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856422259273227,
+          "psl_db": -20.313847836579626,
+          "wall_ms": 31.172399991191924,
+          "cuda_event_ms": null,
+          "setup_seconds": 0.03875770000740886,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "consensus_blocks": 9,
+            "local_rho_multiplier": 1.0,
+            "local_step_multiplier": 0.75,
+            "execution_layers": 2,
+            "gradient": "paired_slice"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 31.172399991191924,
+              "cuda_event_ms": null,
+              "peak_allocated_mib": null,
+              "psl_db": -20.313847836579626,
+              "max_modulus_error": 1.4357949096321931e-07,
+              "scorer_difference_db": -1.2484448603800047e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "CPU"
+          }
+        },
+        {
+          "method": "wavenet",
+          "label": "WaveNet",
+          "seed": 1860028,
+          "device": "cpu",
+          "quick": true,
+          "updates": 100,
+          "stop_reason": "maximum_steps",
+          "initial_psl_db": -18.856422259273227,
+          "psl_db": -23.54023513322013,
+          "wall_ms": 373.4624999924563,
+          "cuda_event_ms": null,
+          "setup_seconds": 1.4626632999861613,
+          "settings": {
+            "learning_rate": 0.001,
+            "min_steps": 2000,
+            "max_steps": 100,
+            "plateau_block": 100,
+            "plateau_blocks": 10,
+            "tolerance_db": 0.005,
+            "parameters": 394752,
+            "graph": false
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 373.4624999924563,
+              "cuda_event_ms": null,
+              "peak_allocated_mib": null,
+              "psl_db": -23.54023513322013,
+              "max_modulus_error": 3.9066617385508096e-08,
+              "scorer_difference_db": -1.5211595822961499e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "CPU"
+          }
+        },
+        {
+          "method": "mal",
+          "label": "MAL-Net",
+          "seed": 1860028,
+          "device": "cpu",
+          "quick": true,
+          "updates": 112,
+          "stop_reason": "maximum_passes",
+          "initial_psl_db": -18.856422259273227,
+          "psl_db": -23.248759631655382,
+          "wall_ms": 138.17509997170419,
+          "cuda_event_ms": null,
+          "setup_seconds": 0.08378159999847412,
+          "settings": {
+            "layers": 56,
+            "max_passes": 2,
+            "patience": 20,
+            "tolerance_db": 0.01,
+            "step_start": 0.04,
+            "step_end": 0.008,
+            "weights": "preset_steps"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 138.17509997170419,
+              "cuda_event_ms": null,
+              "peak_allocated_mib": null,
+              "psl_db": -23.248759631655382,
+              "max_modulus_error": 4.200235270701569e-08,
+              "scorer_difference_db": -1.3156153428894868e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "CPU"
+          }
+        },
+        {
+          "method": "ours",
+          "label": "Ours",
+          "seed": 1860028,
+          "device": "cpu",
+          "quick": true,
+          "updates": 32,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.856422259273227,
+          "psl_db": -19.41161790347654,
+          "wall_ms": 33.567699952982366,
+          "cuda_event_ms": null,
+          "setup_seconds": 0.10653119999915361,
+          "settings": {
+            "length": 256,
+            "doppler_bins": [
+              -4,
+              -3,
+              -2,
+              -1,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "delay_bins": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              -4,
+              -3,
+              -2,
+              -1,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "exclude_origin": true,
+            "outer_iterations": 448,
+            "inner_updates": 16,
+            "parameter_stages": 8,
+            "parameters": {
+              "alpha": 0.008,
+              "rho": 0.1978032260497325,
+              "mu": 0.15069389411697287,
+              "gamma": 0.45
+            },
+            "q_initial": 8,
+            "q_final": 128,
+            "q_ramp_outer_iterations": 56,
+            "projection_mode": 3,
+            "select_best": true,
+            "fuse_momentum": true,
+            "dtype": "float32/complex64",
+            "note": "Full precision controls used to obtain the final paper results; not rounded display values.",
+            "backend": "torch",
+            "graph": false,
+            "execution_layers": 2
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 33.567699952982366,
+              "cuda_event_ms": null,
+              "peak_allocated_mib": null,
+              "psl_db": -19.41161790347654,
+              "max_modulus_error": 1.711351047539722e-07,
+              "scorer_difference_db": 1.2829248277057559e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "CPU"
+          }
+        }
+      ]
+    }
+  },
+  "paper_seed_validation": {
+    "protocol": "example",
+    "device": "cuda",
+    "quick": false,
+    "results": {
+      "summary": [
+        {
+          "method": "admm",
+          "label": "ADMM",
+          "seeds": 1,
+          "psl_db": -45.19609266597656,
+          "wall_ms": 10768.93600000767,
+          "cuda_event_ms": 10768.59765625,
+          "mean_updates": 7168
+        },
+        {
+          "method": "aiso",
+          "label": "AISO",
+          "seeds": 1,
+          "psl_db": -46.56864183280245,
+          "wall_ms": 13886.295199976303,
+          "cuda_event_ms": 13885.8720703125,
+          "mean_updates": 7168
+        },
+        {
+          "method": "qgd",
+          "label": "QGD",
+          "seeds": 1,
+          "psl_db": -45.92481718099418,
+          "wall_ms": 11521.676299977116,
+          "cuda_event_ms": 11521.3232421875,
+          "mean_updates": 7168
+        },
+        {
+          "method": "wavenet",
+          "label": "WaveNet",
+          "seeds": 1,
+          "psl_db": -42.92791708024269,
+          "wall_ms": 3597.9340999620035,
+          "cuda_event_ms": 3597.788330078125,
+          "mean_updates": 5000
+        },
+        {
+          "method": "mal",
+          "label": "MAL-Net",
+          "seeds": 1,
+          "psl_db": -47.86572899898318,
+          "wall_ms": 6370.630400022492,
+          "cuda_event_ms": 6370.4296875,
+          "mean_updates": 4368
+        }
+      ],
+      "runs": [
+        {
+          "method": "admm",
+          "label": "ADMM",
+          "seed": 95000,
+          "device": "cuda",
+          "quick": false,
+          "updates": 7168,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.041692427781328,
+          "psl_db": -45.19609266597656,
+          "wall_ms": 10768.93600000767,
+          "cuda_event_ms": 10768.59765625,
+          "setup_seconds": 0.9003035000059754,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "execution_layers": 448,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 10768.93600000767,
+              "cuda_event_ms": 10768.59765625,
+              "peak_allocated_mib": 16.19384765625,
+              "psl_db": -45.19609266597656,
+              "max_modulus_error": 1.1171049352221019e-07,
+              "scorer_difference_db": 1.8469628955131157e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "aiso",
+          "label": "AISO",
+          "seed": 95000,
+          "device": "cuda",
+          "quick": false,
+          "updates": 7168,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.041692427781328,
+          "psl_db": -46.56864183280245,
+          "wall_ms": 13886.295199976303,
+          "cuda_event_ms": 13885.8720703125,
+          "setup_seconds": 0.9515717999893241,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.08,
+            "final_step": 0.03,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "block_size": 256,
+            "acceleration": 0.35,
+            "step_multiplier": 1.0,
+            "execution_layers": 448,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 13886.295199976303,
+              "cuda_event_ms": 13885.8720703125,
+              "peak_allocated_mib": 16.19384765625,
+              "psl_db": -46.56864183280245,
+              "max_modulus_error": 6.664757057350812e-08,
+              "scorer_difference_db": -7.799599323732309e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "qgd",
+          "label": "QGD",
+          "seed": 95000,
+          "device": "cuda",
+          "quick": false,
+          "updates": 7168,
+          "stop_reason": "fixed_budget",
+          "initial_psl_db": -18.041692427781328,
+          "psl_db": -45.92481718099418,
+          "wall_ms": 11521.676299977116,
+          "cuda_event_ms": 11521.3232421875,
+          "setup_seconds": 0.9127125999657437,
+          "settings": {
+            "outer_layers": 448,
+            "inner_updates": 16,
+            "initial_peak_order": 8.0,
+            "final_peak_order": 128.0,
+            "initial_rho": 0.2,
+            "final_rho": 0.4,
+            "initial_step": 0.2,
+            "final_step": 0.04,
+            "dual_scale": 1.0,
+            "select_best": true,
+            "schedule_layers": 56,
+            "momentum": 0.0,
+            "gradient_normalization": false,
+            "execution_layers": 448,
+            "gradient": "dense_analytic"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 11521.676299977116,
+              "cuda_event_ms": 11521.3232421875,
+              "peak_allocated_mib": 16.19384765625,
+              "psl_db": -45.92481718099418,
+              "max_modulus_error": 6.26867160402611e-08,
+              "scorer_difference_db": -4.8640996510584955e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "wavenet",
+          "label": "WaveNet",
+          "seed": 95000,
+          "device": "cuda",
+          "quick": false,
+          "updates": 5000,
+          "stop_reason": "PSL_plateau_1000_steps",
+          "initial_psl_db": -18.041692427781328,
+          "psl_db": -42.92791708024269,
+          "wall_ms": 3597.9340999620035,
+          "cuda_event_ms": 3597.788330078125,
+          "setup_seconds": 2.053828699979931,
+          "settings": {
+            "learning_rate": 0.001,
+            "min_steps": 2000,
+            "max_steps": 30000,
+            "plateau_block": 100,
+            "plateau_blocks": 10,
+            "tolerance_db": 0.005,
+            "parameters": 394752,
+            "graph": true
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 3597.9340999620035,
+              "cuda_event_ms": 3597.788330078125,
+              "peak_allocated_mib": 47.9560546875,
+              "psl_db": -42.92791708024269,
+              "max_modulus_error": 6.932681562155096e-08,
+              "scorer_difference_db": -3.4144712088846063e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        },
+        {
+          "method": "mal",
+          "label": "MAL-Net",
+          "seed": 95000,
+          "device": "cuda",
+          "quick": false,
+          "updates": 4368,
+          "stop_reason": "PSL_plateau_20_passes",
+          "initial_psl_db": -18.041692427781328,
+          "psl_db": -47.86572899898318,
+          "wall_ms": 6370.630400022492,
+          "cuda_event_ms": 6370.4296875,
+          "setup_seconds": 0.44678050000220537,
+          "settings": {
+            "layers": 56,
+            "max_passes": 100,
+            "patience": 20,
+            "tolerance_db": 0.01,
+            "step_start": 0.04,
+            "step_end": 0.008,
+            "weights": "preset_steps"
+          },
+          "samples": [
+            {
+              "repetition": 1,
+              "wall_ms": 6370.630400022492,
+              "cuda_event_ms": 6370.4296875,
+              "peak_allocated_mib": 12.99365234375,
+              "psl_db": -47.86572899898318,
+              "max_modulus_error": 6.033489974299755e-08,
+              "scorer_difference_db": -6.34273317956513e-06
+            }
+          ],
+          "environment": {
+            "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+            "torch": "2.5.1+cu121",
+            "cuda": "12.1",
+            "device": "NVIDIA GeForce RTX 3070"
+          }
+        }
+      ]
+    }
+  },
+  "reference_comparisons": [
+    {
+      "method": "admm",
+      "seed": 1860028,
+      "actual_psl_db": -45.61439642207133,
+      "reference_psl_db": -45.61439642207133,
+      "difference_db": 0.0
+    },
+    {
+      "method": "aiso",
+      "seed": 1860028,
+      "actual_psl_db": -45.449534993478906,
+      "reference_psl_db": -45.449534993478906,
+      "difference_db": 0.0
+    },
+    {
+      "method": "qgd",
+      "seed": 1860028,
+      "actual_psl_db": -45.75756619470954,
+      "reference_psl_db": -45.75756619470954,
+      "difference_db": 0.0
+    },
+    {
+      "method": "consensus",
+      "seed": 1860028,
+      "actual_psl_db": -48.57260027216582,
+      "reference_psl_db": -48.57260027216582,
+      "difference_db": 0.0
+    },
+    {
+      "method": "ours",
+      "seed": 1860028,
+      "actual_psl_db": -51.15729256501993,
+      "reference_psl_db": -51.15729256501993,
+      "difference_db": 0.0
+    },
+    {
+      "method": "admm",
+      "seed": 95000,
+      "actual_psl_db": -45.19609266597656,
+      "reference_psl_db": -45.19609451293945,
+      "difference_db": 1.8469628955131157e-06,
+      "updates": 7168
+    },
+    {
+      "method": "aiso",
+      "seed": 95000,
+      "actual_psl_db": -46.56864183280245,
+      "reference_psl_db": -46.568634033203125,
+      "difference_db": -7.799599323732309e-06,
+      "updates": 7168
+    },
+    {
+      "method": "qgd",
+      "seed": 95000,
+      "actual_psl_db": -45.92481718099418,
+      "reference_psl_db": -45.92481231689453,
+      "difference_db": -4.8640996510584955e-06,
+      "updates": 7168
+    },
+    {
+      "method": "wavenet",
+      "seed": 95000,
+      "actual_psl_db": -42.92791708024269,
+      "reference_psl_db": -42.927917080242686,
+      "difference_db": -7.105427357601002e-15,
+      "updates": 5000
+    },
+    {
+      "method": "mal",
+      "seed": 95000,
+      "actual_psl_db": -47.86572899898318,
+      "reference_psl_db": -47.86572265625,
+      "difference_db": -6.34273317956513e-06,
+      "updates": 4368
+    }
+  ],
+  "scope": "All seven full-budget methods at seed 1860028; ADMM/AISO/QGD/WaveNet/MAL at paper seed 95000; all seven GPU/CPU short workflows. Six baseline seed sets were not exhaustively rerun. Prior proposed-solver 32-seed verification remains applicable: its implementation is unchanged."
+}

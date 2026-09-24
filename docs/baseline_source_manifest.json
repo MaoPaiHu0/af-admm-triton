@@ -1,0 +1,69 @@
+{
+  "source_files": [
+    {
+      "path": "unimodular_sequence_admm_reproduction/src/unimodular_admm/local_af_baselines.py",
+      "sha256": "2b3a41f0e16adb05788df251a7044d0ef184c1032ed764f281ea4c8b87b21972",
+      "symbols": [
+        "AFBaselineConfig",
+        "AISOConfig",
+        "QGDConfig",
+        "PlainADMMConfig",
+        "ConsensusADMMConfig",
+        "AFBaselineResult",
+        "phase_to_waveform",
+        "_schedule",
+        "_peak_order",
+        "_schedule_fraction",
+        "_dense_af_power",
+        "weighted_af_terms_and_gradient",
+        "exact_local_metrics",
+        "_make_result",
+        "_initial_state",
+        "solve_af_plain_admm",
+        "solve_af_qgd",
+        "solve_af_aiso",
+        "_doppler_slice_masks",
+        "solve_af_consensus_admm"
+      ]
+    },
+    {
+      "path": "figures/consensus_batched_trial_20260911/consensus_packed.py",
+      "sha256": "e1a3cfde66f68de20e7a1f1ebe6e251f25ccefc3c1d532dccd4f2027a2fe2a8c",
+      "symbols": [
+        "PackedDopplerGradient"
+      ]
+    },
+    {
+      "path": "unimodular_sequence_admm_reproduction/src/unimodular_admm/paper_af_networks.py",
+      "sha256": "74c6433ffb376b67dde92a7eeb791422db96fcc3388d366d169245d2a115b441",
+      "symbols": [
+        "make_objective",
+        "waveform",
+        "WaveNetResidualBlock",
+        "WaveNetPhaseNetwork"
+      ]
+    },
+    {
+      "path": "unimodular_sequence_admm_reproduction/scripts/benchmark_first_three_paper_networks_memory.py",
+      "sha256": "dc1f7ebc60911e6088d6b584699c2adc4e91accf9b15be69b97ceb2b626dd5ad",
+      "symbols": [
+        "MALNetLocalAF"
+      ]
+    },
+    {
+      "path": "unimodular_sequence_admm_reproduction/scripts/benchmark_paper_af_networks.py",
+      "sha256": "ed46bd1f47bc17f170139b07d6a9c4764c532819e743942156c38eb32449a209",
+      "symbols": [
+        "selected WaveNet/MAL online orchestration"
+      ]
+    },
+    {
+      "path": "unimodular_sequence_admm_reproduction/scripts/benchmark_converged_optimization.py",
+      "sha256": "650b19ef2710b4e6434065ac359375fde586cc3843992a6d23ba84fbd70a1b9a",
+      "symbols": [
+        "selected WaveNet/MAL online orchestration"
+      ]
+    }
+  ],
+  "changes": "Selected symbols only; import paths adapted. Added prefix execution argument. Consensus gradient is the current paired-slice implementation, prepared before timing; unused diagnostic branch and runtime AST construction removed. Network numerical bodies retained."
+}

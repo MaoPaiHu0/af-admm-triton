@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "af-admm-unfolding"
+version = "0.2.0"
+description = "Operator-fused local AF optimization and six comparison implementations"
+requires-python = ">=3.10,<3.13"
+dependencies = ["torch==2.5.1", "numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+gpu = ["triton==3.1.0; platform_system == 'Linux'", "triton-windows==3.1.0.post17; platform_system == 'Windows'"]
+test = ["pytest>=7"]
+figures = ["matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+af_unfolding = ["data/*.json", "data/*.npy"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = ["cuda: requires a CUDA device and Triton"]

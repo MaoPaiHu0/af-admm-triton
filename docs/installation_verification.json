@@ -1,0 +1,76 @@
+{
+  "install": {
+    "version": "0.2.0",
+    "wheel_sha256": "ec930153acd2962efb439c31b1e70364a73ef47c67942a0f57ae1d58eb2d5fe7",
+    "build": "passed",
+    "isolated_install": "passed",
+    "seven_method_cpu_pipeline": "passed",
+    "mode": "quick / reduced budget",
+    "module_entry": "python -m af_unfolding.pipeline"
+  },
+  "summary": [
+    {
+      "method": "admm",
+      "label": "ADMM",
+      "seeds": 1,
+      "psl_db": -20.84013433942062,
+      "wall_ms": 32.443600008264184,
+      "cuda_event_ms": null,
+      "mean_updates": 32
+    },
+    {
+      "method": "aiso",
+      "label": "AISO",
+      "seeds": 1,
+      "psl_db": -21.805639230590025,
+      "wall_ms": 53.35699999704957,
+      "cuda_event_ms": null,
+      "mean_updates": 32
+    },
+    {
+      "method": "qgd",
+      "label": "QGD",
+      "seeds": 1,
+      "psl_db": -23.834943366230124,
+      "wall_ms": 37.590800027828664,
+      "cuda_event_ms": null,
+      "mean_updates": 32
+    },
+    {
+      "method": "consensus",
+      "label": "Consensus-ADMM",
+      "seeds": 1,
+      "psl_db": -20.313847836579626,
+      "wall_ms": 27.96080004191026,
+      "cuda_event_ms": null,
+      "mean_updates": 32
+    },
+    {
+      "method": "wavenet",
+      "label": "WaveNet",
+      "seeds": 1,
+      "psl_db": -23.54023513322013,
+      "wall_ms": 432.6106000225991,
+      "cuda_event_ms": null,
+      "mean_updates": 100
+    },
+    {
+      "method": "mal",
+      "label": "MAL-Net",
+      "seeds": 1,
+      "psl_db": -23.248759631655382,
+      "wall_ms": 123.96549998084083,
+      "cuda_event_ms": null,
+      "mean_updates": 112
+    },
+    {
+      "method": "ours",
+      "label": "Ours",
+      "seeds": 1,
+      "psl_db": -19.41161790347654,
+      "wall_ms": 46.080100000835955,
+      "cuda_event_ms": null,
+      "mean_updates": 32
+    }
+  ]
+}

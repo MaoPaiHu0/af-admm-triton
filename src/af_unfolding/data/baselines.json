@@ -1,0 +1,62 @@
+{
+  "admm": {
+    "outer_layers": 448,
+    "inner_updates": 16,
+    "initial_peak_order": 8.0,
+    "final_peak_order": 128.0,
+    "initial_rho": 0.2,
+    "final_rho": 0.4,
+    "initial_step": 0.08,
+    "final_step": 0.03,
+    "dual_scale": 1.0,
+    "select_best": true,
+    "schedule_layers": 56
+  },
+  "aiso": {
+    "outer_layers": 448,
+    "inner_updates": 16,
+    "initial_peak_order": 8.0,
+    "final_peak_order": 128.0,
+    "initial_rho": 0.2,
+    "final_rho": 0.4,
+    "initial_step": 0.08,
+    "final_step": 0.03,
+    "dual_scale": 1.0,
+    "select_best": true,
+    "schedule_layers": 56,
+    "block_size": 256,
+    "acceleration": 0.35,
+    "step_multiplier": 1.0
+  },
+  "qgd": {
+    "outer_layers": 448,
+    "inner_updates": 16,
+    "initial_peak_order": 8.0,
+    "final_peak_order": 128.0,
+    "initial_rho": 0.2,
+    "final_rho": 0.4,
+    "initial_step": 0.2,
+    "final_step": 0.04,
+    "dual_scale": 1.0,
+    "select_best": true,
+    "schedule_layers": 56,
+    "momentum": 0.0,
+    "gradient_normalization": false
+  },
+  "consensus": {
+    "outer_layers": 448,
+    "inner_updates": 16,
+    "initial_peak_order": 8.0,
+    "final_peak_order": 128.0,
+    "initial_rho": 0.2,
+    "final_rho": 0.4,
+    "initial_step": 0.08,
+    "final_step": 0.03,
+    "dual_scale": 1.0,
+    "select_best": true,
+    "schedule_layers": 56,
+    "consensus_blocks": 9,
+    "local_rho_multiplier": 1.0,
+    "local_step_multiplier": 0.75
+  }
+}

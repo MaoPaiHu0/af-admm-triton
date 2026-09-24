@@ -1,0 +1,95 @@
+{
+  "paper_title": "Accelerating Two-Dimensional Ambiguity Function Optimization via Operator-Fused ADMM Unfolding",
+  "paper_entry": "ICASSP_PaperSpine_revision_20260911_v1/paper_rewriting_output/final_paper/main.tex",
+  "method": "fixed four controls; K1/K2/K3 momentum fusion; projection mode 3; full CUDA Graph replay",
+  "source_files": [
+    {
+      "path": "unimodular_sequence_admm_reproduction/src/unimodular_admm/local_ambiguity_objective.py",
+      "sha256": "15e91ec054e04df0748b0edd05e2da5e46c3db2f2c489b879af9094711abad1f"
+    },
+    {
+      "path": "unimodular_sequence_admm_reproduction/src/unimodular_admm/triton_local_af.py",
+      "sha256": "29df06287a7a7b225fa064c099bced88606e245001d334caab03bfbe2c1e7594"
+    },
+    {
+      "path": "unimodular_sequence_admm_reproduction/experiments/constant_schedule_20260908_side/results/selected_schedules.json",
+      "sha256": "eac7c6c50f59a132998a201785ff3dfff7aa8fafac3b9f0bae7043f6c9f4c3c1"
+    },
+    {
+      "path": "experiments/backend_fixed4_20260914/results/canonical_inputs.npz",
+      "sha256": "98814609fd89bb58034762cc31c2e9cd969511c41b5c1c978f656178422064e7"
+    },
+    {
+      "path": "unimodular_sequence_admm_reproduction/experiments/constant_schedule_20260908_side/results/per_seed.csv",
+      "sha256": "ac6469e4ddf56854b0a29c518a096c4d52ccf179458ed8e631c120d8e8d95dc4"
+    },
+    {
+      "path": "AF_figures_rainbow_expanded_20260912/af_expanded_data.npz",
+      "sha256": "1c7337e17721b65b7704f75690e70723fb37aba0784eae0dc857206a7a332911"
+    },
+    {
+      "path": "ICASSP_PaperSpine_revision_20260911_v1/paper_rewriting_output/layout_options_20260911/assets/paper_comparison_values.csv",
+      "sha256": "9daccb0c46569dbde2eb612e5d7ebb41263c2dac74e2c8f72795b565494cca7c"
+    }
+  ],
+  "extracted_classes": [
+    {
+      "name": "LocalAFWaveformDesign",
+      "source_start": 22,
+      "source_end": 33
+    },
+    {
+      "name": "LocalAFRegion",
+      "source_start": 36,
+      "source_end": 58
+    },
+    {
+      "name": "LocalAmbiguityObjective",
+      "source_start": 111,
+      "source_end": 464
+    },
+    {
+      "name": "PureLocalAFADMMResult",
+      "source_start": 663,
+      "source_end": 673
+    },
+    {
+      "name": "OperatorAwarePureLocalAFADMMNet",
+      "source_start": 978,
+      "source_end": 1367
+    },
+    {
+      "name": "CapturedPureLocalAFADMM",
+      "source_start": 1370,
+      "source_end": 1420
+    }
+  ],
+  "paper_files": [
+    {
+      "path": "main.tex",
+      "sha256": "23d90a815be0302768573eebf5b80ab36007dfe0ef9573509f526f3f046431dd"
+    },
+    {
+      "path": "section2_en.tex",
+      "sha256": "fe5631afcf5c314d74eaab0d17274e1ab7b0f24412f28be29ac3b63d70fe9fee"
+    },
+    {
+      "path": "section3.tex",
+      "sha256": "531e70c035548a5f9a7f9bd5d39f92ae43c7fecc5f512d663e2a883a23e4f698"
+    },
+    {
+      "path": "section4.tex",
+      "sha256": "ecd2655955ae632b2f73675f11fc3ab464209a61eb8a7d0c7f817f0152da2e5a"
+    },
+    {
+      "path": "algorithm1.tex",
+      "sha256": "7e8ebd233e3ac677b5dac8eddc9f44e4819fa664029a3b26a2b21244d62b4020"
+    },
+    {
+      "path": "table_results_rows.tex",
+      "sha256": "22705acf093b38cddb397837b3e317fa590f00a0639a12a76ae2f58d6de9d088"
+    }
+  ],
+  "changes": "Extraction of current classes, removal of unrelated imports, annotation-only adaptation. Defined zero projection as 1+0j and normalized tiny nonzero projection inputs in Torch. Added a separate masked Triton guard after the unchanged projection kernel so normal-input compiled arithmetic remains untouched. Final configuration supplied explicitly. No checkpoint needed.",
+  "baseline_scope": "Six current local-AF adaptations included: ADMM, AISO, QGD, paired Consensus-ADMM, online WaveNet and preset-step MAL-Net. Only selected current implementations and data are packaged."
+}
